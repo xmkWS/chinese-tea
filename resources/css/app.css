@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../fonts/Onest-Regular.ttf');
+}
+
+p{
+    font-family: 'Onest';
+}
+
+a{
+    font-family: 'Onest';
+}
+
+.text-2xl{
+    font-family: 'Anton';
+    text-transform: uppercase;
+}
+
+h1{
+    font-family: 'Anton';
+    text-transform: uppercase;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@layer components {
+    .container {
+        @apply max-w-7xl px-5 mx-auto;
+    }
+    .button {
+        @apply transition ease-in-out delay-100 text-black bg-white hover:text-white hover:bg-gray-800 focus:ring-4 focus:outline-none  font-medium text-sm uppercase px-3 py-2.5 text-center me-2 mb-2;
+    }
+    .button-fill {
+        @apply transition ease-in-out delay-100 text-black bg-white hover:text-white hover:bg-gray-800 focus:ring-4 focus:outline-none  font-medium text-sm uppercase px-3 py-2.5 text-center me-2 mb-2;
+    }
+    .input{
+        @apply outline-0 bg-transparent border border-white border-opacity-25 focus:border-opacity-100 rounded-b-3xl text-white py-4 px-7 placeholder-white placeholder-opacity-50 focus:placeholder-transparent transition w-96;
+    }
+}
